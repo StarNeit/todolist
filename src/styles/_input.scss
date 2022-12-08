@@ -1,0 +1,20 @@
+@import '_color.scss';
+
+input[type='text'] {
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid $grey-200;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: $grey-500;
+  min-width: 0;
+
+  &::placeholder {
+    color: $grey-200;
+  }
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+  }
+}

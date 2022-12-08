@@ -1,0 +1,62 @@
+@import '_color.scss';
+
+.checkbox {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+
+  input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  .label {
+    margin-top: 8px;
+  }
+
+  &:hover input[type='checkbox']:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  &:hover .checkmark {
+    border-color: $grey-400;
+  }
+
+  .checkmark {
+    box-sizing: border-box;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid $grey-200;
+    flex-shrink: 0;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ .checkmark:after {
+    display: block !important;
+  }
+
+  input[type='checkbox']:checked ~ .checkmark {
+    background-color: $primary-light;
+    border-color: $primary-light;
+  }
+
+  .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 3px;
+    height: 8px;
+    border: solid $white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+}

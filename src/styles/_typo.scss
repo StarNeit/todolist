@@ -1,0 +1,19 @@
+@import '_color.scss';
+
+h1 {
+  text-transform: capitalize;
+  font-size: 28px;
+  line-height: 37px;
+  color: $grey-500;
+}
+
+p {
+  font-size: 15px;
+  line-height: 20px;
+
+  &.small {
+    font-size: 11px;
+    line-height: 13px;
+    color: $grey-200;
+  }
+}
